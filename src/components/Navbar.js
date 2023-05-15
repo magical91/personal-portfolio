@@ -1,11 +1,11 @@
-import { Container, Nav } from "react-bootstrap"
+import { Container, Nav, Navbar } from "react-bootstrap"
 import React, { useEffect, useState } from "react";
 import logo from "../assets/img/logo.svg"
 // import navIcon1 from "../assets/img/nav-icon1.svg"
 // import navIcon2 from "../assets/img/nav-icon2.svg"
 // import navIcon3 from "../assets/img/nav-icon3.svg"
 
-const Navbar = () => {
+const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, setScrolled] = useState(false);
 
@@ -69,4 +69,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default NavBar
