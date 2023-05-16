@@ -390,7 +390,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/* Projects Css */
 .project {
   padding: 80px 0;
   position: relative;
@@ -510,6 +510,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-imgbx:hover .proj-txt {
   top: 50%;
   opacity: 1;
+}
+
+.projectImg {
+  height: 40vh;
 }
 
 .proj-txt h4 {
