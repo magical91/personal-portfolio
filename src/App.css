@@ -192,16 +192,16 @@ span.navbar-text {
   width: 0%;
   height: 100%;
   position: absolute;
-  background-color: #fff;
+  background: linear-gradient(90.21deg, #c3b608 -5.91%, #000 111.58%);
   left: 0;
   top: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
 }
 
-.navbar-text button:hover {
+/* .navbar-text button:hover {
   color: #121212;
-}
+} */
 
 .navbar-text button:hover::before {
   content: "";
@@ -344,13 +344,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid #666;
 }
 
-/************ skills Css ************/
-.skill {
+/************ about Css ************/
+.about {
   padding: 0 0 50px 0;
   position: relative;
 }
 
-.skill-bx {
+.about-bx {
   background: #151515;
   border-radius: 64px;
   text-align: center;
@@ -358,12 +358,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: -60px;
 }
 
-.skill h2 {
+.about h2 {
   font-size: 45px;
   font-weight: 700;
 }
 
-.skill p {
+.about p {
   color: #B8B8B8;
   font-size: 18px;
   letter-spacing: 0.8px;
@@ -371,13 +371,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 14px 0 75px 0;
 }
 
-.skill-slider {
+.about-slider {
   width: 80%;
   margin: 0 auto;
   position: relative;
 }
 
-.skill-slider .item img {
+.about-slider .item img {
   width: 50%;
   margin: 0 auto 15px auto;
 }
@@ -393,6 +393,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Project Css ************/
 .project {
   padding: 80px 0;
+  /* z-index: -1; */
   position: relative;
   background-color: black;
 }
@@ -530,18 +531,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
 }
 
-.background-image-right {
+/* .background-image-right {
   top: 20%;
   position: absolute;
   bottom: 0;
   width: 35%;
   right: 0;
   z-index: -4;
-}
+} */
 
 /************ Contact Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  /* background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%); */
   padding: 60px 0 200px 0;
 }
 
@@ -629,7 +630,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
-  background-image: url('./assets/img/footer-bg.png');
+  /* background-image: url('./assets/img/footer-bg.png'); */
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -703,7 +704,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 } */
 
 .footer img {
-  width: 26%;
+  width: 20%;
 }
 
 .footer p {
