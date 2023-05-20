@@ -22,9 +22,12 @@ const NavBar = () => {
         return () => window.removeEventListener("scroll", onScroll);
     }, [])
 
-    const onUpdateActiveLink = (value) => {
-        setActiveLink(value);
-    }
+    // const onUpdateActiveLink = (value) => {
+    //     setActiveLink(value);
+    // }
+
+    // const [navLink, setNavLink] = useState("home");
+
 
     return (
         <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
@@ -38,27 +41,27 @@ const NavBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link
-                            href="#home"
-                            className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
-                            onClick={() => onUpdateActiveLink('home')}>
+                            href="#banner"
+                            className={activeLink === 'banner' ? 'active navbar-link' : 'navbar-link'}
+                            onClick={() => setActiveLink('banner')}>
                             Home
                         </Nav.Link>
                         <Nav.Link
                             href="#projects"
                             className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
-                            onClick={() => onUpdateActiveLink('projects')}>
+                            onClick={() => setActiveLink('projects')}>
                             Projects
                         </Nav.Link>
                         <Nav.Link
                             href="#about"
                             className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'}
-                            onClick={() => onUpdateActiveLink('about')}>
+                            onClick={() => setActiveLink('about')}>
                             About
                         </Nav.Link>
                         <Nav.Link
                             href="#contact"
                             className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'}
-                            onClick={() => onUpdateActiveLink('contact')}>
+                            onClick={() => setActiveLink('contact')}>
                             Contact
                         </Nav.Link>
                     </Nav>

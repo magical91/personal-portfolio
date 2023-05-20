@@ -11,7 +11,6 @@ const Contact = () => {
         phone: '',
         message: ''
     }
-
     const [formDetails, setFormDetails] = useState(formInitialDetails);
     const [buttonText, setButtonText] = useState('Send');
     const [status, setStatus] = useState({});
@@ -25,21 +24,22 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setButtonText('Sending...');
-        let response = await fetch("http://localhost:5000/contact", {
+        setButtonText("Sending...");
+        let response = await fetch("http://localhost:3000/contact", {
             method: "POST",
             headers: {
-                "Content-Type": "Application/json;charset=utf-8",
+                "Content-Type": "application/json;charset=utf-8",
             },
             body: JSON.stringify(formDetails),
         });
+        
         setButtonText("Send");
-        let result = response.json();
+        let result = await response.json();
         setFormDetails(formInitialDetails);
         if (result.code === 200) {
-            setStatus({ success: true, message: 'Message sent successfully' });
+            setStatus({ succes: true, message: 'Message sent successfully' });
         } else {
-            setStatus({ success: false, message: 'Something went wrong, please try again later.' })
+            setStatus({ succes: false, message: 'Something went wrong, please try again later.' });
         }
     };
 

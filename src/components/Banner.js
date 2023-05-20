@@ -41,7 +41,7 @@ const Banner = () => {
     }
 
   return (
-      <div className='banner' id='home'>
+      <div className='banner' id='banner'>
           <Container>
               <Row className="align-items-center">
                   <Col xs={12} md={6} xl={7}>

@@ -8,15 +8,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
-console.log(process.env.EMAIL_USER);
-console.log(process.env.EMAIL_PASS);
+app.listen(3000, () => console.log("Server Running"));
+// console.log(process.env.EMAIL_USER);
+// console.log(process.env.EMAIL_PASS);
 
 const contactEmail = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'outlook',
     auth: {
-        user: "********@gmail.com",
-        pass: ""
+        user: "marissa.martinez91@outlook.com",
+        pass: "Magicalpeaches91*"
     },
 });
 
@@ -35,7 +35,7 @@ router.post("/contact", (req, res) => {
     const phone = req.body.phone;
     const mail = {
         from: name,
-        to: "********@gmail.com",
+        to: "marissa.martinez91@outlook.com",
         subject: "Contact Form Submission - Portfolio",
         html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>
