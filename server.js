@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
+require('dotenv').config();
 
 // server used to send send emails
 const app = express();
@@ -9,14 +10,15 @@ app.use(cors());
 app.use(express.json());
 app.use("/", router);
 app.listen(5000, () => console.log("Server Running"));
-console.log(process.env.EMAIL_USER);
-console.log(process.env.EMAIL_PASS);
+
+const myEmail = process.env.REACT_APP_EMAIL;
+const myPassword = process.env.REACT_APP_PASSWORD;
 
 const contactEmail = nodemailer.createTransport({
     service: 'outlook',
     auth: {
-        user: "marissa.martinez91@outlook.com",
-        pass: "Magicalpeaches91*"
+        user: myEmail,
+        pass: myPassword
     },
 });
 
@@ -35,7 +37,7 @@ router.post("/contact", (req, res) => {
     const phone = req.body.phone;
     const mail = {
         from: name,
-        to: "marissa.martinez91@outlook.com",
+        to: myEmail,
         subject: "Contact Form Submission - Portfolio",
         html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>
