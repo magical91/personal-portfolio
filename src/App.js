@@ -1,28 +1,24 @@
 import './App.css';
-import NavBar from './components/Navbar';
-import Banner from './components/Banner';
-import About from './components/About';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+// import NavBar from './components/Navbar';
+import Home from './routes/Home';
+import About from './routes/About';
+import Project from './routes/Project';
+import Contact from './routes/Contact';
+// import Footer from './components/Footer';
+import { Route, Routes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
 
-  // const [activeLink, setActiveLink] = useState('home');
-  // const [visibility, setVisibility] = useState(false);
-  
-
   return (
-    <div className="App">
-      <NavBar />
-     
-      <Banner />
-      <About />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<Project />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </>
   );
 }
 

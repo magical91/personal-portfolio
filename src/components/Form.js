@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 
-const Contact = () => {
+const Form = () => {
     const formInitialDetails = {
         firstName: '',
         lastName: '',
@@ -43,7 +43,7 @@ const Contact = () => {
     };
 
     return (
-        <section className="contact" id="connect">
+        <section className="contact" id="contact">
             <Container>
                 <Row className="align-items-center">
                     <Col size={12} md={6}>
@@ -86,4 +86,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default Form
